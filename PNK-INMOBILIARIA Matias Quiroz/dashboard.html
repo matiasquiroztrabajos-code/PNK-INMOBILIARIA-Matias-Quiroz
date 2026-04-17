@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dashboard - Panel de Control de PNK Inmobiliaria">
+  <title>Dashboard - PNK Inmobiliaria</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Encabezado con navegación -->
+  <header class="header" role="banner">
+    <div class="header-container">
+      <h1>PNK Inmobiliaria</h1>
+      <nav role="navigation" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="propiedades.html">Propiedades</a>
+        <a href="dashboard.html" aria-current="page">Dashboard</a>
+      </nav>
+      <div class="user-menu">
+        <span aria-label="Usuario: Juan Pérez">👤 Juan Pérez</span>
+        <a href="login.html" aria-label="Cerrar sesión">Salir</a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main" class="main-content dashboard-content">
+    <!-- Barra lateral de navegación -->
+    <aside class="sidebar" role="navigation" aria-label="Menú de navegación del dashboard">
+      <nav>
+        <h3>Menú</h3>
+        <ul>
+          <li><a href="#resumen" aria-label="Ir a resumen del dashboard">📊 Resumen</a></li>
+          <li><a href="#mis-propiedades" aria-label="Ver mis propiedades registradas">🏠 Mis Propiedades</a></li>
+          <li><a href="#registrar-propiedad" aria-label="Registrar una nueva propiedad">➕ Registrar Propiedad</a></li>
+          <li><a href="#mis-usuarios" aria-label="Gestionar mis usuarios">👥 Mis Usuarios</a></li>
+          <li><a href="#solicitudes" aria-label="Ver solicitudes de contacto">📬 Solicitudes</a></li>
+          <li><a href="#configuracion" aria-label="Acceder a configuración">⚙️ Configuración</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal del dashboard -->
+    <section class="dashboard-main">
+      <!-- Sección de Resumen -->
+      <section id="resumen" aria-labelledby="resumen-title">
+        <h2 id="resumen-title">Resumen de tu Cuenta</h2>
+        <div class="stats-grid">
+          <div class="stat-card" aria-label="Total de propiedades">
+            <h3>12</h3>
+            <p>Propiedades Registradas</p>
+          </div>
+          <div class="stat-card" aria-label="Solicitudes activas">
+            <h3>5</h3>
+            <p>Solicitudes Activas</p>
+          </div>
+          <div class="stat-card" aria-label="Usuarios conectados">
+            <h3>23</h3>
+            <p>Usuarios Interesados</p>
+          </div>
+          <div class="stat-card" aria-label="Mensajes sin leer">
+            <h3>3</h3>
+            <p>Mensajes Nuevos</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Mis Propiedades -->
+      <section id="mis-propiedades" aria-labelledby="propiedades-title">
+        <h2 id="propiedades-title">Mis Propiedades</h2>
+        <div class="properties-table-container">
+          <table role="table" aria-label="Tabla de propiedades registradas">
+            <thead>
+              <tr>
+                <th scope="col">Propiedad</th>
+                <th scope="col">Ubicación</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Casa 3 pisos</td>
+                <td>La Serena</td>
+                <td>$154.000.000</td>
+                <td><span class="badge badge-active" role="status">Activa</span></td>
+                <td>
+                  <a href="#editar" aria-label="Editar propiedad: Casa 3 pisos">Editar</a>
+                  <a href="#ver" aria-label="Ver detalles: Casa 3 pisos">Ver</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Departamento 2D</td>
+                <td>Ovalle</td>
+                <td>$90.000.000</td>
+                <td><span class="badge badge-active" role="status">Activa</span></td>
+                <td>
+                  <a href="#editar" aria-label="Editar propiedad: Departamento 2D">Editar</a>
+                  <a href="#ver" aria-label="Ver detalles: Departamento 2D">Ver</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Terreno 500m²</td>
+                <td>Coquimbo</td>
+                <td>$45.000.000</td>
+                <td><span class="badge badge-inactive" role="status">Inactiva</span></td>
+                <td>
+                  <a href="#editar" aria-label="Editar propiedad: Terreno 500m²">Editar</a>
+                  <a href="#ver" aria-label="Ver detalles: Terreno 500m²">Ver</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Sección Registrar Propiedad -->
+      <section id="registrar-propiedad" aria-labelledby="registrar-prop-title">
+        <h2 id="registrar-prop-title">Registrar Nueva Propiedad</h2>
+        <form class="form" aria-label="Formulario de registro de propiedad" novalidate>
+          <fieldset>
+            <legend>Información de la Propiedad</legend>
+            
+            <div class="form-group">
+              <label for="tipo-prop" aria-required="true">Tipo de Propiedad <span aria-label="requerido">*</span></label>
+              <select id="tipo-prop" name="tipo" required>
+                <option value="">Selecciona un tipo</option>
+                <option value="casa">Casa</option>
+                <option value="depto">Departamento</option>
+                <option value="terreno">Terreno</option>
+                <option value="local">Local Comercial</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="titulo-prop" aria-required="true">Título de la Propiedad <span aria-label="requerido">*</span></label>
+              <input type="text" id="titulo-prop" name="titulo" placeholder="Ej: Casa moderna 3 pisos" required>
+            </div>
+
+            <div class="form-group">
+              <label for="descripcion-prop" aria-required="true">Descripción <span aria-label="requerido">*</span></label>
+              <textarea id="descripcion-prop" name="descripcion" rows="4" placeholder="Describe detalladamente la propiedad" required></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="precio-prop" aria-required="true">Precio <span aria-label="requerido">*</span></label>
+                <input type="number" id="precio-prop" name="precio" min="0" placeholder="$" required>
+              </div>
+              <div class="form-group">
+                <label for="metros-prop" aria-required="true">Metros Cuadrados <span aria-label="requerido">*</span></label>
+                <input type="number" id="metros-prop" name="metros" min="0" placeholder="m²" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dormitorios" aria-required="true">Dormitorios <span aria-label="requerido">*</span></label>
+                <input type="number" id="dormitorios" name="dormitorios" min="0" required>
+              </div>
+              <div class="form-group">
+                <label for="banos" aria-required="true">Baños <span aria-label="requerido">*</span></label>
+                <input type="number" id="banos" name="banos" min="0" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Ubicación</legend>
+            
+            <div class="form-group">
+              <label for="región-prop" aria-required="true">Región <span aria-label="requerido">*</span></label>
+              <input type="text" id="región-prop" name="region" placeholder="Ej: Región de Coquimbo" required>
+            </div>
+
+            <div class="form-group">
+              <label for="comuna-prop" aria-required="true">Comuna <span aria-label="requerido">*</span></label>
+              <input type="text" id="comuna-prop" name="comuna" placeholder="Ej: La Serena" required>
+            </div>
+
+            <div class="form-group">
+              <label for="direccion-prop" aria-required="true">Dirección <span aria-label="requerido">*</span></label>
+              <input type="text" id="direccion-prop" name="direccion" placeholder="Calle, número, complemento" required>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Imágenes y Documentos</legend>
+            
+            <div class="form-group">
+              <label for="imagenes-prop" aria-required="true">Fotos de la Propiedad <span aria-label="requerido">*</span></label>
+              <input type="file" id="imagenes-prop" name="imagenes" accept="image/*" multiple required aria-describedby="img-help">
+              <small id="img-help">Carga mínimo 3 fotos (JPG, PNG)</small>
+            </div>
+
+            <div class="form-group">
+              <label for="documento-prop" aria-required="true">Documento de Propiedad <span aria-label="requerido">*</span></label>
+              <input type="file" id="documento-prop" name="documento" accept=".pdf,.doc,.docx" required aria-describedby="doc-help">
+              <small id="doc-help">PDF, DOC o DOCX (máx. 10MB)</small>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary" aria-label="Registrar propiedad">Registrar Propiedad</button>
+            <button type="reset" class="btn-secondary" aria-label="Limpiar formulario">Limpiar</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Sección de Mis Usuarios -->
+      <section id="mis-usuarios" aria-labelledby="usuarios-title">
+        <h2 id="usuarios-title">Gestión de Usuarios</h2>
+        <div class="users-grid" role="list">
+          <article class="user-card" role="listitem" aria-label="Usuario: María González">
+            <h3>María González</h3>
+            <p><strong>Email:</strong> maria@email.com</p>
+            <p><strong>Rol:</strong> Propietario</p>
+            <p><strong>Estado:</strong> <span class="badge badge-active" role="status">Activo</span></p>
+            <div class="card-actions">
+              <a href="#editar" aria-label="Editar usuario María González">Editar</a>
+              <a href="#eliminar" aria-label="Eliminar usuario María González">Eliminar</a>
+            </div>
+          </article>
+
+          <article class="user-card" role="listitem" aria-label="Usuario: Pedro López">
+            <h3>Pedro López</h3>
+            <p><strong>Email:</strong> pedro@email.com</p>
+            <p><strong>Rol:</strong> Gestor</p>
+            <p><strong>Estado:</strong> <span class="badge badge-active" role="status">Activo</span></p>
+            <div class="card-actions">
+              <a href="#editar" aria-label="Editar usuario Pedro López">Editar</a>
+              <a href="#eliminar" aria-label="Eliminar usuario Pedro López">Eliminar</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Sección de Solicitudes -->
+      <section id="solicitudes" aria-labelledby="solicitudes-title">
+        <h2 id="solicitudes-title">Solicitudes de Contacto</h2>
+        <div class="requests-list">
+          <article class="request-card" aria-label="Solicitud de: Juan Rodríguez">
+            <h3>Juan Rodríguez</h3>
+            <p><strong>Propiedad:</strong> Casa en La Serena</p>
+            <p><strong>Mensaje:</strong> Me interesa la propiedad, ¿puedo agendar una visita?</p>
+            <p><strong>Fecha:</strong> 17/04/2026 - 14:30</p>
+            <div class="card-actions">
+              <a href="#responder" aria-label="Responder solicitud de Juan Rodríguez">Responder</a>
+              <a href="#marcar-leido" aria-label="Marcar como leído">Marcar como leído</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer role="contentinfo" aria-label="Pie de página">
+    <p>&copy; 2026 PNK Inmobiliaria. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login - PNK Inmobiliaria">
+  <title>Login - PNK Inmobiliaria</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Encabezado con navegación -->
+  <header class="header" role="banner">
+    <div class="header-container">
+      <h1>PNK Inmobiliaria</h1>
+      <nav role="navigation" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="propiedades.html">Propiedades</a>
+        <a href="login.html" aria-current="page">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="main-content">
+    <section class="form-section" aria-labelledby="login-title">
+      <h2 id="login-title">Acceso a tu Cuenta</h2>
+      <p class="form-description">Inicia sesión en tu cuenta de PNK Inmobiliaria</p>
+      
+      <form class="form" aria-label="Formulario de inicio de sesión" novalidate>
+        <div class="form-group">
+          <label for="email-login" aria-required="true">Correo Electrónico <span aria-label="requerido">*</span></label>
+          <input type="email" id="email-login" name="email" placeholder="correo@ejemplo.com" required aria-describedby="email-help">
+          <small id="email-help">Tu correo electrónico registrado</small>
+        </div>
+
+        <div class="form-group">
+          <label for="pass-login" aria-required="true">Contraseña <span aria-label="requerido">*</span></label>
+          <input type="password" id="pass-login" name="password" placeholder="Tu contraseña" required>
+        </div>
+
+        <div class="form-group checkbox">
+          <input type="checkbox" id="recordar" name="recordar">
+          <label for="recordar">Recuérdame en este dispositivo</label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary" aria-label="Iniciar sesión">Iniciar Sesión</button>
+        </div>
+      </form>
+
+      <div class="form-footer">
+        <p><a href="recuperar.html" aria-label="Recuperar contraseña olvidada">¿Olvidaste tu contraseña?</a></p>
+        <p>¿No tienes cuenta? 
+          <a href="registro-propietario.html" aria-label="Registrarse como propietario">Registrate como propietario</a> o 
+          <a href="registro-gestor.html" aria-label="Registrarse como gestor">como gestor</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer role="contentinfo" aria-label="Pie de página">
+    <p>&copy; 2026 PNK Inmobiliaria. Todos los derechos reservados.</p>
+    <nav aria-label="Enlaces del pie de página">
+      <a href="#" aria-label="Política de privacidad">Privacidad</a>
+      <a href="#" aria-label="Términos de servicio">Términos</a>
+      <a href="#" aria-label="Contacto">Contacto</a>
+    </nav>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

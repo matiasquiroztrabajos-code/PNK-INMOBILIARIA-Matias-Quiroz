@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de propiedades disponibles - PNK Inmobiliaria">
+  <title>Propiedades Disponibles - PNK Inmobiliaria</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Encabezado con navegación -->
+  <header class="header" role="banner">
+    <div class="header-container">
+      <h1>PNK Inmobiliaria</h1>
+      <nav role="navigation" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="propiedades.html" aria-current="page">Propiedades</a>
+        <a href="login.html">Login</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="main-content">
+    <!-- Sección de filtros -->
+    <aside class="filters" role="complementary" aria-label="Filtros de búsqueda">
+      <h2>Filtrar Propiedades</h2>
+      <form aria-label="Formulario de filtros" novalidate>
+        <fieldset>
+          <legend>Tipo de Propiedad</legend>
+          <div class="filter-group">
+            <input type="checkbox" id="tipo-casa" name="tipo" value="casa">
+            <label for="tipo-casa">Casa</label>
+          </div>
+          <div class="filter-group">
+            <input type="checkbox" id="tipo-depto" name="tipo" value="departamento">
+            <label for="tipo-depto">Departamento</label>
+          </div>
+          <div class="filter-group">
+            <input type="checkbox" id="tipo-terreno" name="tipo" value="terreno">
+            <label for="tipo-terreno">Terreno</label>
+          </div>
+          <div class="filter-group">
+            <input type="checkbox" id="tipo-local" name="tipo" value="local">
+            <label for="tipo-local">Local Comercial</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Precio</legend>
+          <div class="filter-group">
+            <label for="precio-min">Mínimo:</label>
+            <input type="number" id="precio-min" name="precio_min" placeholder="$" min="0">
+          </div>
+          <div class="filter-group">
+            <label for="precio-max">Máximo:</label>
+            <input type="number" id="precio-max" name="precio_max" placeholder="$" min="0">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dormitorios</legend>
+          <div class="filter-group">
+            <input type="checkbox" id="dorm-1" name="dormitorios" value="1">
+            <label for="dorm-1">1+</label>
+          </div>
+          <div class="filter-group">
+            <input type="checkbox" id="dorm-2" name="dormitorios" value="2">
+            <label for="dorm-2">2+</label>
+          </div>
+          <div class="filter-group">
+            <input type="checkbox" id="dorm-3" name="dormitorios" value="3">
+            <label for="dorm-3">3+</label>
+          </div>
+        </fieldset>
+
+        <div class="filter-actions">
+          <button type="submit" class="btn-primary" aria-label="Aplicar filtros">Aplicar Filtros</button>
+          <button type="reset" class="btn-secondary" aria-label="Limpiar filtros">Limpiar</button>
+        </div>
+      </form>
+    </aside>
+
+    <!-- Sección de propiedades -->
+    <section class="properties-section" aria-labelledby="propiedades-title">
+      <h2 id="propiedades-title">Catálogo de Propiedades</h2>
+      <p class="results-info" role="status" aria-live="polite">Mostrando 24 propiedades disponibles</p>
+      
+      <div class="grid" role="list" aria-label="Lista de propiedades disponibles">
+        <article class="card" role="listitem" aria-label="Propiedad: Casa en La Serena, $154.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_614901-MLC92045992673_092025-F-nueva-umbrales.webp" alt="Casa moderna en La Serena" loading="lazy">
+            <span class="badge-featured" aria-label="Propiedad destacada">Destacada</span>
+          </div>
+          <div class="card-content">
+            <h3>Casa moderna en La Serena</h3>
+            <p class="card-price">$154.000.000</p>
+            <p class="card-details">Casa - La Serena</p>
+            <div class="card-specs">
+              <span aria-label="3 dormitorios">🛏️ 3 dorms</span>
+              <span aria-label="2 baños">🚿 2 baños</span>
+              <span aria-label="250 metros cuadrados">📐 250 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles de casa en La Serena">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Departamento en Ovalle, $90.000.000">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&h=400&fit=crop" alt="Departamento en Ovalle" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Departamento moderno en Ovalle</h3>
+            <p class="card-price">$90.000.000</p>
+            <p class="card-details">Departamento - Ovalle</p>
+            <div class="card-specs">
+              <span aria-label="2 dormitorios">🛏️ 2 dorms</span>
+              <span aria-label="1 baño">🚿 1 baño</span>
+              <span aria-label="120 metros cuadrados">📐 120 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles de departamento en Ovalle">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Terreno en Coquimbo, $45.500.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_935499-MLC108368128895_032026-F-parcela-sector-mirador-quilacn-condominio.webp" alt="Terreno en Coquimbo" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Terreno en ubicación privilegiada</h3>
+            <p class="card-price">$45.500.000</p>
+            <p class="card-details">Terreno - Coquimbo</p>
+            <div class="card-specs">
+              <span aria-label="1000 metros cuadrados">📐 1000 m²</span>
+              <span aria-label="Frente al mar">🌊 Vista mar</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del terreno">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Local comercial en La Serena, $125.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_627165-MLC109368667898_042026-F-se-vende-restaurant-con-excelente-ubicacion-en-la-serena.webp" alt="Local comercial en La Serena" loading="lazy">
+            <span class="badge-featured" aria-label="Propiedad destacada">Destacada</span>
+          </div>
+          <div class="card-content">
+            <h3>Local comercial La Serena</h3>
+            <p class="card-price">$125.000.000</p>
+            <p class="card-details">Local - La Serena</p>
+            <div class="card-specs">
+              <span aria-label="350 metros cuadrados">📐 350 m²</span>
+              <span aria-label="Centro comercial">🏪 Centro</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del local">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Casa en Ovalle, $185.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_707008-MLC110355322057_042026-F-moderna-casa-en-condominio-altovalsol-la-serena.webp" alt="Casa en Ovalle" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Casa con piscina en Ovalle</h3>
+            <p class="card-price">$185.000.000</p>
+            <p class="card-details">Casa - Ovalle</p>
+            <div class="card-specs">
+              <span aria-label="4 dormitorios">🛏️ 4 dorms</span>
+              <span aria-label="3 baños">🚿 3 baños</span>
+              <span aria-label="320 metros cuadrados">📐 320 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles de la casa">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Departamento en La Serena, $78.500.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_627537-MLC107585184243_022026-F-laguna-del-mar.webp" alt="Departamento en La Serena" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Departamento con vista al mar</h3>
+            <p class="card-price">$78.500.000</p>
+            <p class="card-details">Departamento - La Serena</p>
+            <div class="card-specs">
+              <span aria-label="2 dormitorios">🛏️ 2 dorms</span>
+              <span aria-label="2 baños">🚿 2 baños</span>
+              <span aria-label="140 metros cuadrados">📐 140 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del departamento">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Casa en Coquimbo, $220.000.000">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop" alt="Casa en Coquimbo" loading="lazy">
+            <span class="badge-featured" aria-label="Propiedad destacada">Destacada</span>
+          </div>
+          <div class="card-content">
+            <h3>Casa</h3>
+            <p class="card-price">$220.000.000</p>
+            <p class="card-details">Casa - Coquimbo</p>
+            <div class="card-specs">
+              <span aria-label="5 dormitorios">🛏️ 5 dorms</span>
+              <span aria-label="4 baños">🚿 4 baños</span>
+              <span aria-label="450 metros cuadrados">📐 450 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles de la casa">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Departamento en Coquimbo, $65.000.000">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&h=400&fit=crop" alt="Departamento en Coquimbo" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Departamento moderno Coquimbo</h3>
+            <p class="card-price">$65.000.000</p>
+            <p class="card-details">Departamento - Coquimbo</p>
+            <div class="card-specs">
+              <span aria-label="2 dormitorios">🛏️ 2 dorms</span>
+              <span aria-label="1 baño">🚿 1 baño</span>
+              <span aria-label="110 metros cuadrados">📐 110 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del departamento">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Casa en La Serena, $165.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_641304-MLC110509943879_042026-F-arriendo-ano-corrido-caleta-san-pedro-la-serena.webp" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Casa tradicional La Serena</h3>
+            <p class="card-price">$165.000.000</p>
+            <p class="card-details">Casa - La Serena</p>
+            <div class="card-specs">
+              <span aria-label="3 dormitorios">🛏️ 3 dorms</span>
+              <span aria-label="2 baños">🚿 2 baños</span>
+              <span aria-label="280 metros cuadrados">📐 280 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles de la casa">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Local en Ovalle, $95.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_602928-MLC104144226874_012026-F-oficina-en-arriendo-en-la-serena-cisternas.webp" alt="Local en Ovalle" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Local comercial Ovalle</h3>
+            <p class="card-price">$95.000.000</p>
+            <p class="card-details">Local - Ovalle</p>
+            <div class="card-specs">
+              <span aria-label="200 metros cuadrados">📐 200 m²</span>
+              <span aria-label="Renovado">✨ Renovado</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del local">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Terreno en La Serena, $52.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_713555-MLC92389742068_092025-F-parcela-en-venta-en-la-serena-condominio-vista-elqui.webp" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Terreno La Serena</h3>
+            <p class="card-price">$52.000.000</p>
+            <p class="card-details">Terreno - La Serena</p>
+            <div class="card-specs">
+              <span aria-label="800 metros cuadrados">📐 800 m²</span>
+              <span aria-label="Acceso a la calle">🛣️ Buen acceso</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del terreno">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Departamento en La Serena, $88.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_712751-MLC109239764298_042026-F-departamento-avenida-del-mar-id-169064.webp" alt="Departamento en La Serena" loading="lazy">
+            <span class="badge-featured" aria-label="Propiedad destacada">Destacada</span>
+          </div>
+          <div class="card-content">
+            <h3>Departamento céntrico La Serena</h3>
+            <p class="card-price">$88.000.000</p>
+            <p class="card-details">Departamento - La Serena</p>
+            <div class="card-specs">
+              <span aria-label="2 dormitorios">🛏️ 2 dorms</span>
+              <span aria-label="2 baños">🚿 2 baños</span>
+              <span aria-label="130 metros cuadrados">📐 130 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del departamento">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Casa en Coquimbo, $198.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_761448-MLC109496180600_042026-F-oportunidad-de-arriendo-en-sector-san-joaquin-146243.webp" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Casa familiar Coquimbo</h3>
+            <p class="card-price">$198.000.000</p>
+            <p class="card-details">Casa - Coquimbo</p>
+            <div class="card-specs">
+              <span aria-label="4 dormitorios">🛏️ 4 dorms</span>
+              <span aria-label="2 baños">🚿 2 baños</span>
+              <span aria-label="380 metros cuadrados">📐 380 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles de la casa">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Departamento en Ovalle, $82.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_673765-MLC110433744505_042026-F-ano-corrido-av-francisco-de-aguirre-a-pasos-del-faro.webp" alt="Departamento en Ovalle" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Departamento acogedora Ovalle</h3>
+            <p class="card-price">$82.000.000</p>
+            <p class="card-details">Departamento - Ovalle</p>
+            <div class="card-specs">
+              <span aria-label="2 dormitorios">🛏️ 2 dorms</span>
+              <span aria-label="1 baño">🚿 1 baño</span>
+              <span aria-label="115 metros cuadrados">📐 115 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del departamento">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Local en La Serena, $115.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_834138-MLC98642689287_112025-F-arriendo-gran-local-primera-linea-avdel-mar-coquiimbo.webp" alt="Local en La Serena" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Local La Serena</h3>
+            <p class="card-price">$115.000.000</p>
+            <p class="card-details">Local - La Serena</p>
+            <div class="card-specs">
+              <span aria-label="250 metros cuadrados">📐 250 m²</span>
+              <span aria-label="Esquina">📍 Esquina</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del local">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Casa en Ovalle, $175.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_928904-MLC108230617734_032026-F-arriendo-casa-secto-serena-golf-la-serena.webp" alt="Casa en Ovalle" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Casa acogedora Ovalle</h3>
+            <p class="card-price">$175.000.000</p>
+            <p class="card-details">Casa - Ovalle</p>
+            <div class="card-specs">
+              <span aria-label="3 dormitorios">🛏️ 3 dorms</span>
+              <span aria-label="3 baños">🚿 3 baños</span>
+              <span aria-label="300 metros cuadrados">📐 300 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles de la casa">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Terreno en Ovalle, $38.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_775835-MLC109809911773_032026-F-se-arriendan-terrenos-comerciales-en-huachalalume-coquimbo.webp" alt="Terreno en Ovalle" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Terreno Ovalle</h3>
+            <p class="card-price">$38.000.000</p>
+            <p class="card-details">Terreno - Ovalle</p>
+            <div class="card-specs">
+              <span aria-label="600 metros cuadrados">📐 600 m²</span>
+              <span aria-label="Rústico">🌿 Rústico</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del terreno">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Departamento en Coquimbo, $75.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_824675-MLC109584471600_042026-F-acogedor-departamento-con-linda-vista.webp" alt="Departamento en Coquimbo" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Departamento Coquimbo</h3>
+            <p class="card-price">$75.000.000</p>
+            <p class="card-details">Departamento - Coquimbo</p>
+            <div class="card-specs">
+              <span aria-label="1 dormitorio">🛏️ 1 dorm</span>
+              <span aria-label="1 baño">🚿 1 baño</span>
+              <span aria-label="80 metros cuadrados">📐 80 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del departamento">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Casa en La Serena, $145.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_770274-MLC110237981621_042026-F-casa-solida-de-un-piso-para-uso-comercial-pleno-g.webp" alt="Casa en La Serena" loading="lazy">
+            <span class="badge-featured" aria-label="Propiedad destacada">Destacada</span>
+          </div>
+          <div class="card-content">
+            <h3>Casa La Serena</h3>
+            <p class="card-price">$145.000.000</p>
+            <p class="card-details">Casa - La Serena</p>
+            <div class="card-specs">
+              <span aria-label="3 dormitorios">🛏️ 3 dorms</span>
+              <span aria-label="2 baños">🚿 2 baños</span>
+              <span aria-label="260 metros cuadrados">📐 260 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles de la casa">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Local en Coquimbo, $105.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_734570-MLC109508251114_042026-F-arriendo-local-comercial-en-sector-balmaceda-158032.webp" alt="Local en Coquimbo" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Local Coquimbo</h3>
+            <p class="card-price">$105.000.000</p>
+            <p class="card-details">Local - Coquimbo</p>
+            <div class="card-specs">
+              <span aria-label="280 metros cuadrados">📐 280 m²</span>
+              <span aria-label="Moderno">🏗️ Moderno</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del local">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Casa en Coquimbo, $210.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_776792-MLC110470781243_042026-F-local-comercial-la-serena-238-m2-ubicacion-privilegiada.webp" alt="Casa en Coquimbo" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Casa ejecutiva Coquimbo</h3>
+            <p class="card-price">$210.000.000</p>
+            <p class="card-details">Casa - Coquimbo</p>
+            <div class="card-specs">
+              <span aria-label="4 dormitorios">🛏️ 4 dorms</span>
+              <span aria-label="3 baños">🚿 3 baños</span>
+              <span aria-label="400 metros cuadrados">📐 400 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles de la casa">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Departamento en La Serena, $95.000.000">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=500&h=400&fit=crop" alt="Departamento en La Serena" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Departamento La Serena centro</h3>
+            <p class="card-price">$95.000.000</p>
+            <p class="card-details">Departamento - La Serena</p>
+            <div class="card-specs">
+              <span aria-label="3 dormitorios">🛏️ 3 dorms</span>
+              <span aria-label="2 baños">🚿 2 baños</span>
+              <span aria-label="150 metros cuadrados">📐 150 m²</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del departamento">Ver más</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Propiedad: Terreno en Coquimbo, $48.000.000">
+          <div class="card-image">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_833425-MLC88296564510_072025-F-amplio-terreno-en-arriendo-sin-rol-av-guillermo.webp" alt="Terreno en Coquimbo" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Terreno Coquimbo</h3>
+            <p class="card-price">$48.000.000</p>
+            <p class="card-details">Terreno - Coquimbo</p>
+            <div class="card-specs">
+              <span aria-label="700 metros cuadrados">📐 700 m²</span>
+              <span aria-label="Avenida principal">🛣️ Avenida</span>
+            </div>
+            <a href="detalle.html" class="btn-more" aria-label="Ver detalles del terreno">Ver más</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Paginación -->
+      <nav class="pagination" aria-label="Paginación de resultados">
+        <a href="#" aria-label="Página anterior" aria-disabled="true">← Anterior</a>
+        <span role="status" aria-current="page">Página 1 de 5</span>
+        <a href="#" aria-label="Página siguiente">Siguiente →</a>
+      </nav>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer role="contentinfo" aria-label="Pie de página">
+    <p>&copy; 2026 PNK Inmobiliaria. Todos los derechos reservados.</p>
+    <nav aria-label="Enlaces del pie de página">
+      <a href="#" aria-label="Política de privacidad">Privacidad</a>
+      <a href="#" aria-label="Términos de servicio">Términos</a>
+      <a href="#" aria-label="Contacto">Contacto</a>
+    </nav>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
