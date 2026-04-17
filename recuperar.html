@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Recuperar Contraseña - PNK Inmobiliaria">
+  <title>Recuperar Contraseña - PNK Inmobiliaria</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Encabezado con navegación -->
+  <header class="header" role="banner">
+    <div class="header-container">
+      <h1>PNK Inmobiliaria</h1>
+      <nav role="navigation" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="propiedades.html">Propiedades</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="main-content">
+    <section class="form-section" aria-labelledby="recuperar-title">
+      <h2 id="recuperar-title">Recuperar Contraseña</h2>
+      <p class="form-description">Te enviaremos instrucciones para recuperar tu contraseña</p>
+      
+      <form class="form" aria-label="Formulario de recuperación de contraseña" novalidate>
+        <div class="alert alert-info" role="status" aria-live="polite">
+          <p>Ingresa el correo electrónico asociado a tu cuenta y recibirás un enlace para establecer una nueva contraseña.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="email-recuperar" aria-required="true">Correo Electrónico <span aria-label="requerido">*</span></label>
+          <input type="email" id="email-recuperar" name="email" placeholder="correo@ejemplo.com" required aria-describedby="email-help">
+          <small id="email-help">Correo asociado a tu cuenta</small>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary" aria-label="Enviar enlace de recuperación">Enviar Enlace de Recuperación</button>
+          <a href="login.html" class="btn-secondary" aria-label="Volver al login">Volver al Login</a>
+        </div>
+      </form>
+
+      <div class="form-footer">
+        <p>¿No tienes cuenta? 
+          <a href="registro-propietario.html" aria-label="Registrarse como propietario">Registrate aquí</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección de soporte -->
+    <section class="support-section" aria-labelledby="soporte-title">
+      <h2 id="soporte-title">¿Necesitas Ayuda?</h2>
+      <div class="support-content">
+        <article>
+          <h3>Pasos para recuperar tu contraseña:</h3>
+          <ol>
+            <li>Ingresa tu correo electrónico registrado</li>
+            <li>Presiona "Enviar Enlace de Recuperación"</li>
+            <li>Revisa tu correo (incluyendo la carpeta de spam)</li>
+            <li>Haz clic en el enlace que recibas</li>
+            <li>Establece una nueva contraseña segura</li>
+          </ol>
+        </article>
+        <article>
+          <h3>¿Aún tienes problemas?</h3>
+          <p>Si no recibes el correo de recuperación en los próximos 5 minutos, intenta lo siguiente:</p>
+          <ul>
+            <li>Verifica que hayas ingresado el correo correcto</li>
+            <li>Revisa tu carpeta de spam o correo no deseado</li>
+            <li>Intenta nuevamente después de algunos minutos</li>
+            <li>Ponte en contacto con nuestro equipo de soporte</li>
+          </ul>
+        </article>
+      </div>
+      <div class="contact-info">
+        <p><strong>Contacta a nuestro equipo de soporte:</strong></p>
+        <p>Email: <a href="mailto:soporte@pnkinmobiliaria.com" aria-label="Enviar correo al equipo de soporte">soporte@pnkinmobiliaria.com</a></p>
+        <p>Teléfono: <a href="tel:+56912345678" aria-label="Llamar al equipo de soporte">+56 9 1234 5678</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer role="contentinfo" aria-label="Pie de página">
+    <p>&copy; 2026 PNK Inmobiliaria. Todos los derechos reservados.</p>
+    <nav aria-label="Enlaces del pie de página">
+      <a href="#" aria-label="Política de privacidad">Privacidad</a>
+      <a href="#" aria-label="Términos de servicio">Términos</a>
+      <a href="#" aria-label="Contacto">Contacto</a>
+    </nav>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
